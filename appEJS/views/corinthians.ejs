@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel='stylesheet' href='/stylesheets/corinthians.css' />
+  </head>
+  <body class="corinthians-page">
+    <header class="corinthians-header">
+      <h1 class="club-name"><%= club.name %></h1>
+      <p class="club-description"><%= club.description %></p>
+    </header>
+    <main class="corinthians-content">
+      <section class="club-info">
+        <h2>Informações do Clube</h2>
+        <ul class="club-details">
+          <li><strong>Fundação:</strong> <%= club.founded %></li>
+          <li><strong>Localização:</strong> <%= club.location %></li>
+          <li><strong>Campeonatos:</strong> <%= club.championships %></li>
+        </ul>
+      </section>
+    </main>
+    <footer class="corinthians-footer">
+      <p>Vai, Corinthians!</p>
+    </footer>
+  </body>
+</html>

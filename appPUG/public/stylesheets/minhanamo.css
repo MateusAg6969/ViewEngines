@@ -1,0 +1,83 @@
+body {
+  margin: 0;
+  font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+  background: radial-gradient(circle at top, #ffe8ef 0%, #ffd6e8 35%, #ffc1dc 100%);
+  min-height: 100vh;
+}
+
+.amor-bg {
+  min-height: calc(100vh - 100px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.carta {
+  width: min(760px, 100%);
+  background: #fff9fb;
+  border: 2px solid #ff95ba;
+  border-radius: 22px;
+  box-shadow: 0 16px 40px rgba(196, 48, 112, 0.25);
+  padding: 32px;
+  position: relative;
+}
+
+.carta::before,
+.carta::after {
+  content: "";
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  background: #ff4f8b;
+  transform: rotate(45deg);
+  opacity: 0.2;
+}
+
+.carta::before {
+  top: 16px;
+  left: 16px;
+}
+
+.carta::after {
+  bottom: 16px;
+  right: 16px;
+}
+
+.titulo {
+  margin-top: 0;
+  margin-bottom: 8px;
+  color: #b1125b;
+  font-size: clamp(1.8rem, 3vw, 2.6rem);
+}
+
+.destinataria {
+  margin-top: 0;
+  margin-bottom: 24px;
+  color: #d12b75;
+  font-weight: 700;
+}
+
+.texto {
+  color: #6f1b44;
+  line-height: 1.7;
+  font-size: 1.08rem;
+  margin-bottom: 16px;
+}
+
+.assinatura {
+  margin-top: 22px;
+  color: #a10f4f;
+  font-style: italic;
+  font-weight: 700;
+}
+
+@media (max-width: 640px) {
+  .carta {
+    padding: 22px;
+  }
+
+  .texto {
+    font-size: 1rem;
+  }
+}

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel='stylesheet' href='/stylesheets/fallout.css' />
+  </head>
+  <body>
+    <div class="fallout-page">
+      <div class="fallout-header">
+        <a href="/fallout" class="fallout-back">← Voltar</a>
+        <h1 class="fallout-titulo">☢️ <%= title %></h1>
+      </div>
+      <ul class="fallout-lista">
+        <% curiosidades.forEach(function(item) { %>
+          <li class="fallout-item"><%= item %></li>
+        <% }); %>
+      </ul>
+    </div>
+  </body>
+</html>

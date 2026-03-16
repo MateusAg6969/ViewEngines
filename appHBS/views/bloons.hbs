@@ -1,0 +1,37 @@
+<link rel='stylesheet' href='/stylesheets/bloons.css' />
+
+<div class="btd6-page">
+  <header class="btd6-header">
+    <h1 class="game-title">{{game.name}}</h1>
+    <p class="game-description">{{game.description}}</p>
+  </header>
+
+  <main class="btd6-content">
+    <section class="game-info">
+      <h2>Informações do Jogo</h2>
+      <ul class="game-details">
+        <li><strong>Desenvolvedor:</strong> {{game.developer}}</li>
+        <li><strong>Lançamento:</strong> {{game.released}}</li>
+        <li><strong>Plataformas:</strong> {{game.platforms}}</li>
+        <li><strong>Gênero:</strong> {{game.genre}}</li>
+      </ul>
+    </section>
+
+    <section class="towers-section">
+      <h2>Torres Populares</h2>
+      <div class="towers-grid">
+        {{#each towers}}
+        <div class="tower-card">
+          <h3 class="tower-name">{{this.name}}</h3>
+          <span class="tower-tier">{{this.tier}}</span>
+          <p class="tower-desc">{{this.description}}</p>
+        </div>
+        {{/each}}
+      </div>
+    </section>
+  </main>
+
+  <footer class="btd6-footer">
+    <p>🎈 Pop! Pop! Pop! 🐵</p>
+  </footer>
+</div>

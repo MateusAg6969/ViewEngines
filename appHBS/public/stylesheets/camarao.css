@@ -1,0 +1,140 @@
+body {
+  margin: 0;
+  font-family: "Segoe UI", "Trebuchet MS", sans-serif;
+  background: linear-gradient(160deg, #e0f7fa 0%, #b2ebf2 50%, #80deea 100%);
+  min-height: 100vh;
+}
+
+/* ---- Hero (página principal) ---- */
+.camarao-hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 32px;
+  text-align: center;
+}
+
+/* ---- Páginas internas ---- */
+.camarao-page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 32px 24px;
+}
+
+.camarao-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 32px;
+}
+
+/* ---- Tipografia ---- */
+.camarao-titulo {
+  color: #006064;
+  font-size: clamp(2rem, 4vw, 3rem);
+  margin: 0 0 12px;
+}
+
+.camarao-subtitulo {
+  color: #00838f;
+  font-size: 1.1rem;
+  max-width: 600px;
+  line-height: 1.7;
+  margin-bottom: 40px;
+}
+
+/* ---- Botões de navegação ---- */
+.camarao-nav {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.camarao-btn {
+  display: inline-block;
+  padding: 12px 28px;
+  background: #00838f;
+  color: #fff;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1rem;
+  box-shadow: 0 4px 14px rgba(0, 96, 100, 0.35);
+  transition: background 0.2s, transform 0.15s;
+}
+
+.camarao-btn:hover {
+  background: #006064;
+  transform: translateY(-2px);
+}
+
+/* ---- Botão voltar ---- */
+.camarao-back {
+  color: #00838f;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  white-space: nowrap;
+}
+
+.camarao-back:hover {
+  text-decoration: underline;
+}
+
+/* ---- Lista de curiosidades ---- */
+.camarao-lista {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.camarao-item {
+  background: #fff;
+  border-left: 5px solid #26c6da;
+  border-radius: 10px;
+  padding: 14px 18px;
+  color: #004d40;
+  font-size: 1rem;
+  line-height: 1.6;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+}
+
+/* ---- Cards de cuidados ---- */
+.camarao-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.camarao-card {
+  background: #fff;
+  border-radius: 14px;
+  padding: 20px;
+  box-shadow: 0 4px 16px rgba(0, 96, 100, 0.12);
+  border-top: 4px solid #4dd0e1;
+}
+
+.camarao-card-titulo {
+  color: #00838f;
+  font-size: 1.1rem;
+  margin: 0 0 8px;
+}
+
+.camarao-card-texto {
+  color: #006064;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+@media (max-width: 600px) {
+  .camarao-cards {
+    grid-template-columns: 1fr;
+  }
+}

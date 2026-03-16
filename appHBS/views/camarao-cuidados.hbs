@@ -1,0 +1,17 @@
+<link rel='stylesheet' href='/stylesheets/camarao.css' />
+
+<div class="camarao-page">
+  <div class="camarao-header">
+    <a href="/camarao" class="camarao-back">← Voltar</a>
+    <h1 class="camarao-titulo">🦐 {{title}}</h1>
+  </div>
+
+  <div class="camarao-cards">
+    {{#each cuidados}}
+    <div class="camarao-card">
+      <h2 class="camarao-card-titulo">{{this.topico}}</h2>
+      <p class="camarao-card-texto">{{this.descricao}}</p>
+    </div>
+    {{/each}}
+  </div>
+</div>

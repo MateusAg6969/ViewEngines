@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel='stylesheet' href='/stylesheets/fallout.css' />
+  </head>
+  <body>
+    <div class="fallout-page">
+      <div class="fallout-header">
+        <a href="/fallout" class="fallout-back">← Voltar</a>
+        <h1 class="fallout-titulo">☢️ <%= title %></h1>
+      </div>
+      <div class="fallout-cards">
+        <% jogos.forEach(function(jogo) { %>
+          <div class="fallout-card">
+            <h2 class="fallout-card-titulo"><%= jogo.nome %></h2>
+            <span class="fallout-card-badge"><%= jogo.estudio %></span>
+            <span class="fallout-card-badge fallout-card-badge--tipo"><%= jogo.tipo %></span>
+            <p class="fallout-card-texto"><%= jogo.descricao %></p>
+          </div>
+        <% }); %>
+      </div>
+    </div>
+  </body>
+</html>

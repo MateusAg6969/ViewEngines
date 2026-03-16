@@ -1,0 +1,11 @@
+extends layout
+
+block content
+  link(rel='stylesheet', href='/stylesheets/iguanas.css')
+
+  .iguana-hero
+    h1.iguana-titulo 🦎 #{title}
+    p.iguana-subtitulo #{descricao}
+    nav.iguana-nav
+      a(href='/iguanas/curiosidades').iguana-btn Curiosidades
+      a(href='/iguanas/cuidados').iguana-btn Cuidados

@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  link(rel='stylesheet', href='/stylesheets/iguanas.css')
+
+  .iguana-page
+    .iguana-header
+      a(href='/iguanas').iguana-back ← Voltar
+      h1.iguana-titulo 🦎 #{title}
+
+    .iguana-cards
+      each item in cuidados
+        .iguana-card
+          h2.iguana-card-titulo #{item.topico}
+          p.iguana-card-texto #{item.descricao}
