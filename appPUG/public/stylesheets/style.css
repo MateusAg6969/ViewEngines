@@ -6,3 +6,51 @@ body {
 a {
   color: #00B7FF;
 }
+
+/* ================================
+   Estilos para tabela de produtos
+   ================================ */
+
+/**
+ * Estilos base da tabela:
+ * - collapse: remove espaços entre as bordas das células
+ * - width 100%: ocupa todo o espaço disponível
+ * - max-width 600px: limite máximo para melhor legibilidade
+ */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 600px;
+  margin-top: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Cabeçalho da tabela: fundo azul e texto branco para destaque */
+table thead {
+  background-color: #007bff;
+  color: white;
+}
+
+/* Células do cabeçalho: padding e borda */
+table th {
+  padding: 12px;
+  text-align: left;
+  font-weight: bold;
+  border: 1px solid #ddd;
+}
+
+/* Células de dados: padding e borda */
+table td {
+  padding: 10px 12px;
+  border: 1px solid #ddd;
+}
+
+/* Linhas alternadas do corpo da tabela: melhora a legibilidade */
+table tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+/* Efeito hover: destaca a linha ao passar o mouse */
+table tbody tr:hover {
+  background-color: #f0f0f0;
+}

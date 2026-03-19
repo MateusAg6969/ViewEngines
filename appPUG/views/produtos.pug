@@ -1,0 +1,23 @@
+extends layout
+
+block content
+  h1 Lista de Produtos
+  
+  //- Verifica se há produtos e renderiza a tabela
+  if produtos && produtos.length > 0
+    table(border="1", cellpadding="10", cellspacing="0")
+      thead
+        tr
+          th ID
+          th Nome
+          th Preço
+      tbody
+        //- Itera sobre cada produto
+        each produto in produtos
+          tr
+            td= produto.id
+            td= produto.nome
+            //- Formata preço com símbolo de moeda brasileira e 2 casas decimais
+            td= 'R$ ' + produto.preco.toFixed(2)
+  else
+    p Nenhum produto disponível.

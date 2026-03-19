@@ -4,27 +4,31 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
+// Importa rotas da aplicação
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var corinthiansRouter = require('./routes/corinthians');
 var falloutRouter = require('./routes/fallout');
+var produtoRouter = require('./routes/produto');
 
 var app = express();
 
-// view engine setup
+// Configuração do motor de visualização (EJS)
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
-app.use(logger('dev'));
-app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
-app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
+// Middlewares de logging e parsing
+app.use(logger('dev')); // Log de requisições HTTP
+app.use(express.json()); // Parser JSON
+app.use(express.urlencoded({ extended: false })); // Parser URL-encoded
+app.use(cookieParser()); // Parser de cookies
+app.use(express.static(path.join(__dirname, 'public'))); // Serve arquivos estáticos
 
-app.use('/', indexRouter);
+// Rotas da aplicação
 app.use('/users', usersRouter);
 app.use('/corinthians', corinthiansRouter);
 app.use('/fallout', falloutRouter);
+app.use('/produto', produtoRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

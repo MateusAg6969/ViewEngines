@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Produtos</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1>Lista de Produtos</h1>
+    
+    <!-- Verifica se há produtos e renderiza a tabela -->
+    <% if (produtos && produtos.length > 0) { %>
+      <table border="1" cellpadding="10" cellspacing="0">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>Preço</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Itera sobre cada produto -->
+          <% produtos.forEach(produto => { %>
+            <tr>
+              <td><%= produto.id %></td>
+              <td><%= produto.nome %></td>
+              <!-- Formata preço com 2 casas decimais e moeda -->
+              <td>R$ <%= produto.preco.toFixed(2) %></td>
+            </tr>
+          <% }); %>
+        </tbody>
+      </table>
+    <% } else { %>
+      <p>Nenhum produto disponível.</p>
+    <% } %>
+  </body>
+</html>
